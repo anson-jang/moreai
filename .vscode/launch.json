@@ -6,7 +6,7 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/moreai.web/bin/Debug/net9.0/moreai.dll",
+      "program": "${workspaceFolder}/src/moreai.web/bin/Debug/net8.0/moreai.dll",
       "args": [],
       "cwd": "${workspaceFolder}/src/moreai.web",
       "stopAtEntry": false,
@@ -15,14 +15,17 @@
         "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
       },
       "env": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "https://localhost:7224"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
       },
       "launchBrowser": {
         "enabled": true,
-        "args": "https://localhost:7224",
-        "windows": {
-          "command": "cmd.exe",
-          "args": "/C start ${auto-detect-url}"
+        "args": "${auto-detect-url}",
+        "osx": {
+          "command": "open"
         }
       }
     }
