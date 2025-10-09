@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "會員群組指派";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3>會員群組指派</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>可用群組</h4>
+                            <div class="list-group" id="availableGroups">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>已加入的群組</h4>
+                            <div class="list-group" id="assignedGroups">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/groups/assign.js"></script>
+}

@@ -1,0 +1,80 @@
+@model moreai.web.Models.Group
+
+@{
+    ViewData["Title"] = "群組成員管理";
+    var availableMembers = ViewBag.AvailableMembers as List<moreai.web.Models.Member>;
+}
+
+<h1>@ViewData["Title"] - @Model.Name</h1>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <h3>現有成員</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>使用者名稱</th>
+                    <th>姓名</th>
+                    <th>加入時間</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var memberGroup in Model.Members)
+                {
+                    <tr>
+                        <td>@memberGroup.Member.Username</td>
+                        <td>@($"{memberGroup.Member.FirstName} {memberGroup.Member.LastName}")</td>
+                        <td>@memberGroup.JoinedAt.ToString("yyyy/MM/dd HH:mm:ss")</td>
+                        <td>
+                            <form asp-action="RemoveMember" method="post" style="display: inline;">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="groupId" value="@Model.Id" />
+                                <input type="hidden" name="memberId" value="@memberGroup.Member.Id" />
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('確定要移除此成員嗎？');">
+                                    移除
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-6">
+        <h3>可添加的成員</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>使用者名稱</th>
+                    <th>姓名</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var member in availableMembers)
+                {
+                    <tr>
+                        <td>@member.Username</td>
+                        <td>@($"{member.FirstName} {member.LastName}")</td>
+                        <td>
+                            <form asp-action="AddMember" method="post" style="display: inline;">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="groupId" value="@Model.Id" />
+                                <input type="hidden" name="memberId" value="@member.Id" />
+                                <button type="submit" class="btn btn-success btn-sm">
+                                    添加
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">返回群組列表</a>
+</div>

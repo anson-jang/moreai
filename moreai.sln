@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "moreai.web", "moreai.web", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "moreai", "src\moreai.web\moreai.csproj", "{EAE14D91-85DA-4421-BAC3-449B56D394C0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F41EF347-FCE1-447B-8FBE-A7A1E36A5EFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "moreai.tests", "tests\moreai.tests\moreai.tests.csproj", "{39C9AF63-A842-429E-8177-47D2D5D01E26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,18 @@ Global
 		{EAE14D91-85DA-4421-BAC3-449B56D394C0}.Release|x64.Build.0 = Release|Any CPU
 		{EAE14D91-85DA-4421-BAC3-449B56D394C0}.Release|x86.ActiveCfg = Release|Any CPU
 		{EAE14D91-85DA-4421-BAC3-449B56D394C0}.Release|x86.Build.0 = Release|Any CPU
+		{39C9AF63-A842-429E-8177-47D2D5D01E26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39C9AF63-A842-429E-8177-47D2D5D01E26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39C9AF63-A842-429E-8177-47D2D5D01E26}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{39C9AF63-A842-429E-8177-47D2D5D01E26}.Debug|x64.Build.0 = Debug|Any CPU
+		{39C9AF63-A842-429E-8177-47D2D5D01E26}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{39C9AF63-A842-429E-8177-47D2D5D01E26}.Debug|x86.Build.0 = Debug|Any CPU
+		{39C9AF63-A842-429E-8177-47D2D5D01E26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39C9AF63-A842-429E-8177-47D2D5D01E26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39C9AF63-A842-429E-8177-47D2D5D01E26}.Release|x64.ActiveCfg = Release|Any CPU
+		{39C9AF63-A842-429E-8177-47D2D5D01E26}.Release|x64.Build.0 = Release|Any CPU
+		{39C9AF63-A842-429E-8177-47D2D5D01E26}.Release|x86.ActiveCfg = Release|Any CPU
+		{39C9AF63-A842-429E-8177-47D2D5D01E26}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,5 +54,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{5C740AC6-6559-A6CF-D175-CC4C114B24BE} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{EAE14D91-85DA-4421-BAC3-449B56D394C0} = {5C740AC6-6559-A6CF-D175-CC4C114B24BE}
+		{39C9AF63-A842-429E-8177-47D2D5D01E26} = {F41EF347-FCE1-447B-8FBE-A7A1E36A5EFD}
 	EndGlobalSection
 EndGlobal
