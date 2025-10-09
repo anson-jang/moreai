@@ -60,6 +60,14 @@
 - 允許管理者指派會員至多個群組
 - 預設管理者帳號：ansonjang@gmail.com
 
+## 技術需求
+- framework: ASP.NET Core 8.0
+- database: MySQL 8.0
+- orm: Dapper
+- auth: JWT + ASP.NET Core Identity
+- mail: SMTP/SendGrid
+- frontend: Bootstrap 5 + jQuery
+
 ## 技術規格
 
 ### 資料庫設計
